@@ -72,11 +72,11 @@ C:\Users\janaa\Desktop\COOP\AIchatbot\bin\Debug\net10.0\questions.json
 C:\Users\janaa\Desktop\COOP\AIchatbot\bin\Debug\net10.0\AIChatbot.staticwebassets.runtime.json
 C:\Users\janaa\Desktop\COOP\AIchatbot\obj\Debug\net10.0\compressed\wvpxxvwuzm-{0}-mev7bmzwln-mev7bmzwln.gz
 C:\Users\janaa\Desktop\COOP\AIchatbot\obj\Debug\net10.0\compressed\bifw8dbadu-{0}-ndf5anbjjr-ndf5anbjjr.gz
-C:\Users\janaa\Desktop\COOP\AIchatbot\obj\Debug\net10.0\compressed\h4ctpmiub0-{0}-fc3en7ffwn-fc3en7ffwn.gz
-C:\Users\janaa\Desktop\COOP\AIchatbot\obj\Debug\net10.0\compressed\rfg782uyja-{0}-zyrebtb5vq-zyrebtb5vq.gz
-C:\Users\janaa\Desktop\COOP\AIchatbot\obj\Debug\net10.0\compressed\xdon7jegn0-{0}-sx2nqjd814-sx2nqjd814.gz
 C:\Users\janaa\Desktop\COOP\AIchatbot\obj\Debug\net10.0\compressed\bwi6nfn025-{0}-i0vhvwd7mp-i0vhvwd7mp.gz
 C:\Users\janaa\Desktop\COOP\AIchatbot\obj\Debug\net10.0\compressed\6tm8ngj3jg-{0}-lk6b348nhg-lk6b348nhg.gz
 C:\Users\janaa\Desktop\COOP\AIchatbot\obj\Debug\net10.0\compressed\o0j3iafhe2-{0}-otehexi1t1-otehexi1t1.gz
-C:\Users\janaa\Desktop\COOP\AIchatbot\obj\Debug\net10.0\compressed\83q8xh808w-{0}-kusp3yk12e-kusp3yk12e.gz
-C:\Users\janaa\Desktop\COOP\AIchatbot\obj\Debug\net10.0\compressed\ktib57c0g4-{0}-bdxlqz3iz4-bdxlqz3iz4.gz
+C:\Users\janaa\Desktop\COOP\AIchatbot\obj\Debug\net10.0\compressed\rfg782uyja-{0}-w45smocmj4-w45smocmj4.gz
+C:\Users\janaa\Desktop\COOP\AIchatbot\obj\Debug\net10.0\compressed\xdon7jegn0-{0}-4p37k3r5do-4p37k3r5do.gz
+C:\Users\janaa\Desktop\COOP\AIchatbot\obj\Debug\net10.0\compressed\h4ctpmiub0-{0}-e4nmth1oqb-e4nmth1oqb.gz
+C:\Users\janaa\Desktop\COOP\AIchatbot\obj\Debug\net10.0\compressed\83q8xh808w-{0}-xygg6557t8-xygg6557t8.gz
+C:\Users\janaa\Desktop\COOP\AIchatbot\obj\Debug\net10.0\compressed\ktib57c0g4-{0}-57shf5c21e-57shf5c21e.gz

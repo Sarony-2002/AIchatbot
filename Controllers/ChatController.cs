@@ -18,7 +18,7 @@ public class ChatController : ControllerBase
     [HttpPost]
     public IActionResult Chat([FromBody] ChatRequest request)
     {
-        var response = _chatService.GetResponse(request.Message);
+        var response = _chatService.GetResponse(request.Message, request.Category);
 
         return Ok(new
         {

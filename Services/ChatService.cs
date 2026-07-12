@@ -11,9 +11,9 @@ public class ChatService
         _faqService = faqService;
     }
 
-    public string GetResponse(string message)
+    public string GetResponse(string message, string? category = null)
     {
-        var answer = _faqService.GetAnswer(message);
+        var answer = _faqService.GetAnswer(message, category);
 
         if (answer != null)
         {

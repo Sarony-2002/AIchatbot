@@ -21,6 +21,7 @@ header{
   background:#111827;
   color:#fff;
   padding:20px 24px;
+  flex-shrink:0;
 }
 
 .header-top{
@@ -44,6 +45,7 @@ header{
   display:flex;
   flex-direction:column;
   gap:14px;
+  flex-shrink:0;
 }
 
 .welcome-card,
@@ -104,8 +106,15 @@ header{
   border-color:#93c5fd;
 }
 
+.topic-button.active{
+  background:#2563eb;
+  border-color:#2563eb;
+  color:#fff;
+}
+
 main{
-  flex:1;
+  flex:1 1 auto;
+  min-height:0;
   overflow:auto;
   padding:18px 20px 12px;
   display:flex;
@@ -137,6 +146,9 @@ main{
 .faq-panel{
   padding:16px;
   margin:0 20px 0;
+  flex-shrink:0;
+  max-height:180px;
+  overflow-y:auto;
 }
 
 .faq-head{
@@ -157,6 +169,7 @@ footer{
   flex-direction:column;
   gap:14px;
   background:#fff;
+  flex-shrink:0;
 }
 
 .footer-top{

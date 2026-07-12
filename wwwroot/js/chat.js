@@ -4,6 +4,9 @@ const faqButtonsContainer = document.getElementById("faq-buttons");
 const topicButtons = document.querySelectorAll(".topic-button");
 const changeTopicButton = document.getElementById("change-topic");
 
+let allFaqs = [];
+let activeCategory = null;
+
 function appendMessage(className, text) {
   msgs.innerHTML += `<div class="${className}">${text}</div>`;
   msgs.scrollTop = msgs.scrollHeight;
@@ -20,7 +23,7 @@ async function send(text) {
     const response = await fetch("/api/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message })
+      body: JSON.stringify({ message, category: activeCategory })
     });
 
     const data = await response.json();
@@ -40,18 +43,22 @@ async function loadFaqs() {
     const response = await fetch("/questions.json");
     if (!response.ok) return;
 
-    const faqs = await response.json();
-    renderFaqButtons(faqs);
+    allFaqs = await response.json();
+    renderFaqButtons(allFaqs);
   } catch (error) {
     console.warn("Unable to load FAQ buttons", error);
   }
 }
 
 function renderFaqButtons(faqs) {
-  if (!faqButtonsContainer || !faqs?.length) return;
+  if (!faqButtonsContainer) return;
+
+  const list = activeCategory
+    ? faqs.filter(f => f.category === activeCategory)
+    : faqs;
 
   faqButtonsContainer.innerHTML = "";
-  faqs.slice(0, 12).forEach(faq => {
+  list.slice(0, 12).forEach(faq => {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "faq-button";
@@ -61,15 +68,21 @@ function renderFaqButtons(faqs) {
   });
 }
 
+// Topic buttons set the active category (used for backend matching and to
+// narrow the FAQ suggestions below), rather than just prefilling the input.
 topicButtons.forEach(button => {
   button.addEventListener("click", () => {
-    const topic = button.dataset.topic;
-    input.value = topic;
+    activeCategory = button.dataset.topic;
+    topicButtons.forEach(b => b.classList.toggle("active", b === button));
+    renderFaqButtons(allFaqs);
     input.focus();
   });
 });
 
 changeTopicButton?.addEventListener("click", () => {
+  activeCategory = null;
+  topicButtons.forEach(b => b.classList.remove("active"));
+  renderFaqButtons(allFaqs);
   input.value = "";
   input.focus();
 });

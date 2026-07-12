@@ -44,8 +44,25 @@ public class FAQService
     }
     
 
-    public string? GetAnswer(string question)
+    public string? GetAnswer(string question, string? category = null)
     {
+        // If the user picked a topic in the widget, search within that category first
+        // so the match is more accurate (falls back to searching everything otherwise).
+        if (!string.IsNullOrWhiteSpace(category))
+        {
+            var scoped = _faqs.Where(f =>
+                f.Category.Equals(category, StringComparison.OrdinalIgnoreCase));
+
+            var scopedMatch = scoped.FirstOrDefault(f =>
+                f.Question.Contains(question, StringComparison.OrdinalIgnoreCase) ||
+                question.Contains(f.Question, StringComparison.OrdinalIgnoreCase));
+
+            if (scopedMatch != null)
+            {
+                return scopedMatch.Answer;
+            }
+        }
+
         var faq = _faqs.FirstOrDefault(f =>
             f.Question.Contains(question, StringComparison.OrdinalIgnoreCase) ||
             question.Contains(f.Question, StringComparison.OrdinalIgnoreCase));
