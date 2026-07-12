@@ -67,3 +67,5 @@ C:\Users\janaa\Desktop\COOP\AIchatbot\obj\Debug\net10.0\refint\AIChatbot.dll
 C:\Users\janaa\Desktop\COOP\AIchatbot\obj\Debug\net10.0\AIChatbot.pdb
 C:\Users\janaa\Desktop\COOP\AIchatbot\obj\Debug\net10.0\AIChatbot.genruntimeconfig.cache
 C:\Users\janaa\Desktop\COOP\AIchatbot\obj\Debug\net10.0\ref\AIChatbot.dll
+C:\Users\janaa\Desktop\COOP\AIchatbot\obj\Debug\net10.0\AIChatbot.sourcelink.json
+C:\Users\janaa\Desktop\COOP\AIchatbot\bin\Debug\net10.0\questions.json
