@@ -1,3 +1,4 @@
+using AIChatbot.Models;
 using AIChatbot.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,23 +8,21 @@ namespace AIChatbot.Controllers;
 [Route("api/[controller]")]
 public class ChatController : ControllerBase
 {
-    private readonly FAQService _faqService;
+    private readonly ChatService _chatService;
 
-    public ChatController(FAQService faqService)
+    public ChatController(ChatService chatService)
     {
-        _faqService = faqService;
+        _chatService = chatService;
     }
 
-    [HttpGet]
-    public IActionResult Test(string question)
+    [HttpPost]
+    public IActionResult Chat([FromBody] ChatRequest request)
     {
-        var answer = _faqService.GetAnswer(question);
+        var response = _chatService.GetResponse(request.Message);
 
-        if (answer == null)
+        return Ok(new
         {
-            return NotFound("Question not found.");
-        }
-
-        return Ok(answer);
+            response = response
+        });
     }
 }

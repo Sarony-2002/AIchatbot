@@ -9,6 +9,7 @@ builder.Services.AddOpenApi();
 
 // Register FAQService
 builder.Services.AddSingleton<FAQService>();
+builder.Services.AddSingleton<ChatService>();
 
 var app = builder.Build();
 
@@ -17,6 +18,8 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
+app.UseDefaultFiles();
+app.UseStaticFiles();
 
 app.UseHttpsRedirection();
 

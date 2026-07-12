@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Chatbot Widget</title>
+  <link rel="stylesheet" href="css/chatbot.css" />
+</head>
+<body>
+  <div class="chatbot-widget" id="chatbotWidget">
+    <button class="chatbot-launcher" id="chatbotLauncher" aria-label="Open chat">
+      <span class="launcher-icon">AI</span>
+      <span class="launcher-badge">Chat</span>
+    </button>
+
+    <div class="chatbot-panel" id="chatbotPanel" aria-hidden="true">
+      <div class="chatbot-header">
+        <div>
+          <div class="header-title">AI Assistant</div>
+          <div class="header-subtitle">How can I help you today?</div>
+        </div>
+        <button class="close-button" id="chatbotClose" aria-label="Close chat">✕</button>
+      </div>
+
+      <div class="chatbot-body">
+        <div class="chatbot-welcome" id="welcomeState">
+          <div class="welcome-badge">👋</div>
+          <div class="welcome-text">
+            <strong>Welcome!</strong>
+            <p>I'm your AI Assistant.</p>
+            <p>You can ask me anything about the platform.</p>
+            <p>For faster answers, choose a category below or type your question.</p>
+          </div>
+        </div>
+
+        <div class="category-grid" id="categoryGrid"></div>
+
+        <button type="button" class="secondary back-button hidden" id="backToCategories">Back to categories</button>
+
+        <div class="faq-grid hidden" id="faqGrid"></div>
+
+        <div class="chat-area hidden" id="chatArea">
+          <div class="messages" id="messages"></div>
+          <div class="input-area">
+            <input id="chatInput" type="text" placeholder="Ask me anything..." autocomplete="off" />
+            <button id="sendButton">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/chatbot.js"></script>
+</body>
+</html>
