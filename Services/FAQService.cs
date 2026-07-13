@@ -43,6 +43,11 @@ public class FAQService
         }
     }
     
+    public IReadOnlyList<FAQ> GetAll()
+    {
+        return _faqs;
+    }
+
 
     public string? GetAnswer(string question, string? category = null)
     {

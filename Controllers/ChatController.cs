@@ -9,10 +9,18 @@ namespace AIChatbot.Controllers;
 public class ChatController : ControllerBase
 {
     private readonly ChatService _chatService;
+    private readonly FAQService _faqService;
 
-    public ChatController(ChatService chatService)
+    public ChatController(ChatService chatService, FAQService faqService)
     {
         _chatService = chatService;
+        _faqService = faqService;
+    }
+
+    [HttpGet("faqs")]
+    public IActionResult GetFaqs()
+    {
+        return Ok(_faqService.GetAll());
     }
 
     [HttpPost]
