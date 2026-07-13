@@ -12,15 +12,15 @@ const changeTopicButton = document.getElementById("change-topic");
 
 const topicDisplay = [
   {
-    label: "Center",
+    label: " المركز والخدمات",
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><path d="M4 20h16"/><path d="M6 20V8l6-4 6 4v12"/><path d="M9 20v-6h6v6"/></svg>`
   },
   {
-    label: "Orders",
+    label: "الطلبات والحسابات",
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><path d="M6 3h12l2 4v14H4V7z"/><path d="M6 7h12"/><path d="M9 12h6"/><path d="M9 16h4"/></svg>`
   },
   {
-    label: "Support",
+    label: "الدعم الفني والتواصل",
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><path d="M4 12a8 8 0 0 1 16 0"/><path d="M4 12v4a2 2 0 0 0 2 2h2v-8H6a2 2 0 0 0-2 2Z"/><path d="M20 12v4a2 2 0 0 1-2 2h-2v-8h2a2 2 0 0 1 2 2Z"/><path d="M13 20h3a4 4 0 0 0 4-4"/></svg>`
   }
 ];
@@ -124,10 +124,10 @@ function selectTopic(category, label, button) {
   document.querySelectorAll(".topic-button").forEach(item => {
     item.classList.toggle("active", item === button);
   });
-  faqTitle.textContent = `${label} questions`;
+  faqTitle.textContent = `أسئلة ${label} `;
   renderFaqButtons();
   faqPanel.hidden = false;
-  appendMessage("bot", `Here are the ${label.toLowerCase()} questions. If yours is not listed, type it below.`);
+//   appendMessage("bot", `Here are the ${label.toLowerCase()} questions. If yours is not listed, type it below.`);
 }
 
 function renderFaqButtons() {

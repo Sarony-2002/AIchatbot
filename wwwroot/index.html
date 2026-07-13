@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Platform Assistant</title>
+<title>مساعد المنصة</title>
 <link rel="stylesheet" href="css/chat.css">
 </head>
 <body>
 <div class="page-shell">
   <div class="page-copy">
-    <p class="eyebrow">Platform help</p>
+    <!-- <p class="eyebrow">Platform help</p>
     <h1>Get quick answers without leaving the page.</h1>
-    <p>Open the assistant from the bottom-left corner, choose a topic, then pick a saved question or type your own.</p>
+    <p>Open the assistant from the bottom-left corner, choose a topic, then pick a saved question or type your own.</p> -->
   </div>
 </div>
 
-<section class="chat-widget" aria-label="Platform assistant">
+<section class="chat-widget" aria-label="مساعد المنصة">
   <button id="chat-launcher" class="chat-launcher" type="button" aria-label="Open chatbot" aria-expanded="false">
     <span aria-hidden="true"></span>
   </button>
@@ -24,8 +24,8 @@
     <header>
       <div class="header-top">
         <div>
-          <div class="header-title">Platform Assistant</div>
-          <div class="header-subtitle">Choose a topic or ask below</div>
+          <div class="header-title">مساعد المنصة</div>
+          <!-- <div class="header-subtitle">Choose a topic or ask below</div> -->
         </div>
         <button id="chat-close" class="icon-button" type="button" aria-label="Close chatbot">x</button>
       </div>
@@ -33,31 +33,31 @@
 
     <div class="panel">
       <div class="welcome-card">
-        <div class="welcome-title">Welcome! I'm your AI assistant.</div>
-        <div class="welcome-text">Pick a topic to see related questions, or type your question at the bottom.</div>
+        <div class="welcome-title"> مرحبًا! أنا مساعدك الذكي. </div>
+        <div class="welcome-text"> اختر أحد المواضيع لعرض الأسئلة الشائعة المتعلقة به، أو اكتب سؤالك في الأسفل. </div>
       </div>
 
       <div class="topic-card">
-        <div class="section-label">Choose a topic</div>
+        <div class="section-label">اختر موضوعًا</div>
         <div id="topic-buttons" class="topic-buttons"></div>
       </div>
 
       <div id="faq-panel" class="faq-panel" hidden>
         <div class="faq-head">
           <span id="faq-title">Questions</span>
-          <button id="change-topic" class="text-button" type="button">Change</button>
+          <button id="change-topic" class="text-button" type="button">close</button>
         </div>
         <div id="faq-buttons" class="faq-buttons"></div>
       </div>
     </div>
 
     <main id="messages" aria-live="polite">
-      <div class="bot">Hello! Select a topic to browse questions, or ask me anything.</div>
+      <div class="bot">مرحبًا!👋 اختر موضوعًا لتصفح الأسئلة، أو اسألني أي شيء.</div>
     </main>
 
     <footer>
       <div class="footer-input">
-        <input id="message" placeholder="Type your question..." autocomplete="off" />
+        <input id="message" placeholder="اكتب سؤالك..." autocomplete="off" />
         <button id="send" type="button" aria-label="Send message">&gt;</button>
       </div>
     </footer>

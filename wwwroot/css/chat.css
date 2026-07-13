@@ -8,6 +8,7 @@ body {
   font-family: Inter, Arial, sans-serif;
   background: #f4f6f8;
   color: #111827;
+  direction: rtl;
 }
 
 button,
@@ -24,6 +25,7 @@ input {
 
 .page-copy {
   width: min(620px, 100%);
+  text-align: right;
 }
 
 .eyebrow {
@@ -52,7 +54,7 @@ input {
 
 .chat-widget {
   position: fixed;
-  left: 24px;
+  right: 24px;
   bottom: 24px;
   z-index: 20;
 }
@@ -115,11 +117,13 @@ input {
 
 .app {
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: 0;
   width: min(390px, calc(100vw - 32px));
   height: min(680px, calc(100vh - 48px));
   background: #fff;
+  direction: rtl;
+  text-align: right;
   display: flex;
   flex-direction: column;
   border: 1px solid #dbe3ec;
@@ -313,7 +317,7 @@ header {
   padding: 9px 10px;
   font-size: .8rem;
   line-height: 1.35;
-  text-align: left;
+  text-align: right;
   cursor: pointer;
   transition: background .18s ease, border-color .18s ease;
 }
@@ -377,6 +381,8 @@ input {
   border: 1px solid #cbd5e1;
   font-size: .9rem;
   outline: none;
+  direction: rtl;
+  text-align: right;
 }
 
 input:focus {
@@ -408,7 +414,6 @@ input:focus {
   }
 
   .chat-widget {
-    left: 12px;
     right: 12px;
     bottom: 12px;
   }

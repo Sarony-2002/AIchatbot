@@ -5,6 +5,7 @@
 body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  direction: rtl;
 }
 
 .chatbot-widget {
@@ -60,6 +61,8 @@ body {
   width: min(420px, 100vw);
   max-height: 84vh;
   background: #ffffff;
+  direction: rtl;
+  text-align: right;
   border-radius: 28px;
   box-shadow: 0 40px 90px rgba(15, 23, 42, 0.16);
   margin-top: 16px;
@@ -82,6 +85,7 @@ body {
   padding: 22px 24px 16px;
   background: linear-gradient(180deg, #2563eb 0%, #3b82f6 100%);
   color: #ffffff;
+  text-align: right;
 }
 
 .header-title {
@@ -143,6 +147,7 @@ body {
   font-size: 0.96rem;
   color: #111827;
   line-height: 1.7;
+  text-align: right;
 }
 
 .welcome-text strong {
@@ -170,6 +175,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  text-align: right;
 }
 
 .category-card:hover,
@@ -229,6 +235,7 @@ body {
   position: relative;
   word-break: break-word;
   box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+  text-align: right;
 }
 
 .message.assistant {
@@ -287,6 +294,8 @@ body {
   border: 1px solid #d1d5db;
   outline: none;
   font-size: 0.96rem;
+  direction: rtl;
+  text-align: right;
 }
 
 .input-area input:focus {
