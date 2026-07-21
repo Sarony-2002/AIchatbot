@@ -48,12 +48,43 @@ function setPanelOpen(isOpen) {
   }
 }
 
+// Add these two new helper functions to control the layout states cleanly
+function showTypingIndicator() {
+  // Check if it already exists to prevent duplicate bubbles
+  if (document.getElementById("typing-loader")) return;
+
+  const indicator = document.createElement("div");
+  indicator.id = "typing-loader";
+  indicator.className = "typing-indicator"; // Connects to our CSS layout rules
+
+  // Create the 3 dancing dots
+  for (let i = 0; i < 3; i++) {
+    const dot = document.createElement("div");
+    dot.className = "typing-dot";
+    indicator.appendChild(dot);
+  }
+
+  msgs.appendChild(indicator);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function removeTypingIndicator() {
+  const indicator = document.getElementById("typing-loader");
+  if (indicator) {
+    indicator.remove();
+  }
+}
+
+// ─── UPDATE YOUR EXISTING SEND METHOD TO LOOK LIKE THIS ───
 async function send(text) {
   const message = text?.trim();
   if (!message) return;
 
   appendMessage("user", message);
   input.value = "";
+
+  // 👉 1. Show the typing animation immediately as soon as user submits text
+  showTypingIndicator();
 
   try {
     const response = await fetch("/api/chat", {
@@ -67,8 +98,14 @@ async function send(text) {
     }
 
     const data = await response.json();
+    
+    // 👉 2. Remove the loader animation right before rendering the real text response
+    removeTypingIndicator();
     appendMessage("bot", data.response ?? data);
+
   } catch (error) {
+    // 👉 3. Clean up the loader if a server connection issue happens
+    removeTypingIndicator();
     appendMessage("bot", "Server connection failed.");
     console.error(error);
   }

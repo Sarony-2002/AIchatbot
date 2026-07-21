@@ -1,16 +1,25 @@
 {
   "version": 2,
-  "dgSpecHash": "YVHx2rf1OmU=",
+  "dgSpecHash": "ftYZqzeCuUs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\janaa\\Desktop\\COOP\\AIchatbot\\AIChatbot.csproj",
+  "projectFilePath": "/Users/sara.albarghash/Documents/AIchat/AIchatbot/AIChatbot.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\janaa\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.9\\microsoft.aspnetcore.openapi.10.0.9.nupkg.sha512",
-    "C:\\Users\\janaa\\.nuget\\packages\\microsoft.extensions.apidescription.server\\10.0.0\\microsoft.extensions.apidescription.server.10.0.0.nupkg.sha512",
-    "C:\\Users\\janaa\\.nuget\\packages\\microsoft.openapi\\2.7.5\\microsoft.openapi.2.7.5.nupkg.sha512",
-    "C:\\Users\\janaa\\.nuget\\packages\\swashbuckle.aspnetcore\\10.2.3\\swashbuckle.aspnetcore.10.2.3.nupkg.sha512",
-    "C:\\Users\\janaa\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\10.2.3\\swashbuckle.aspnetcore.swagger.10.2.3.nupkg.sha512",
-    "C:\\Users\\janaa\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\10.2.3\\swashbuckle.aspnetcore.swaggergen.10.2.3.nupkg.sha512",
-    "C:\\Users\\janaa\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\10.2.3\\swashbuckle.aspnetcore.swaggerui.10.2.3.nupkg.sha512"
+    "/Users/sara.albarghash/.nuget/packages/google.apis/1.69.0/google.apis.1.69.0.nupkg.sha512",
+    "/Users/sara.albarghash/.nuget/packages/google.apis.auth/1.69.0/google.apis.auth.1.69.0.nupkg.sha512",
+    "/Users/sara.albarghash/.nuget/packages/google.apis.core/1.69.0/google.apis.core.1.69.0.nupkg.sha512",
+    "/Users/sara.albarghash/.nuget/packages/google.genai/1.14.0/google.genai.1.14.0.nupkg.sha512",
+    "/Users/sara.albarghash/.nuget/packages/microsoft.aspnetcore.openapi/10.0.9/microsoft.aspnetcore.openapi.10.0.9.nupkg.sha512",
+    "/Users/sara.albarghash/.nuget/packages/microsoft.extensions.ai.abstractions/10.6.0/microsoft.extensions.ai.abstractions.10.6.0.nupkg.sha512",
+    "/Users/sara.albarghash/.nuget/packages/microsoft.extensions.apidescription.server/10.0.0/microsoft.extensions.apidescription.server.10.0.0.nupkg.sha512",
+    "/Users/sara.albarghash/.nuget/packages/microsoft.openapi/2.7.5/microsoft.openapi.2.7.5.nupkg.sha512",
+    "/Users/sara.albarghash/.nuget/packages/mimetypes/2.5.2/mimetypes.2.5.2.nupkg.sha512",
+    "/Users/sara.albarghash/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/Users/sara.albarghash/.nuget/packages/swashbuckle.aspnetcore/10.2.3/swashbuckle.aspnetcore.10.2.3.nupkg.sha512",
+    "/Users/sara.albarghash/.nuget/packages/swashbuckle.aspnetcore.swagger/10.2.3/swashbuckle.aspnetcore.swagger.10.2.3.nupkg.sha512",
+    "/Users/sara.albarghash/.nuget/packages/swashbuckle.aspnetcore.swaggergen/10.2.3/swashbuckle.aspnetcore.swaggergen.10.2.3.nupkg.sha512",
+    "/Users/sara.albarghash/.nuget/packages/swashbuckle.aspnetcore.swaggerui/10.2.3/swashbuckle.aspnetcore.swaggerui.10.2.3.nupkg.sha512",
+    "/Users/sara.albarghash/.nuget/packages/system.codedom/7.0.0/system.codedom.7.0.0.nupkg.sha512",
+    "/Users/sara.albarghash/.nuget/packages/system.management/7.0.2/system.management.7.0.2.nupkg.sha512"
   ],
   "logs": []
 }

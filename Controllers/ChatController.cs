@@ -1,6 +1,7 @@
 using AIChatbot.Models;
 using AIChatbot.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks; // Make sure this is here
 
 namespace AIChatbot.Controllers;
 
@@ -24,9 +25,10 @@ public class ChatController : ControllerBase
     }
 
     [HttpPost]
-    public IActionResult Chat([FromBody] ChatRequest request)
+    public async Task<IActionResult> Chat([FromBody] ChatRequest request)
     {
-        var response = _chatService.GetResponse(request.Message, request.Category);
+        // Added 'async Task<IActionResult>' above and 'await' here to process the request smoothly
+        var response = await _chatService.GetResponseAsync(request.Message, request.Category);
 
         return Ok(new
         {
